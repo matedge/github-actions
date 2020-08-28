@@ -1,0 +1,28 @@
+name-template: 'v$NEXT_PATCH_VERSION 🌈'
+tag-template: 'v$NEXT_PATCH_VERSION'
+categories:
+  - title: '🚀 Features'
+    labels:
+      - 'feat'
+      - 'feature'
+  - title: '🐛 Bug Fixes'
+    labels:
+      - 'bug'
+      - 'bugfix'
+      - 'fix'
+  - title: '🛠️ Maintenance'
+    labels:
+      - 'chore'
+      - 'maintenance'
+  - title: '📝️ Documentation'
+    labels:
+      - 'doc'
+      - 'docs'
+      - 'documentation'
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+template: |
+  ## Changes
+  $CHANGES
+replacers:
+  - search: '/PP-(\d{4})/gi'
+    replace: '[PP-$1](https://jira.pingidentity.com/browse/PP-$1)'
